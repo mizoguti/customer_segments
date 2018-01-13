@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>customer_segments_PT</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>customer_segments</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11804,7 +11804,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Importe as bibliotecas necessárias para este projeto</span>
@@ -11862,7 +11862,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mostre a descrição do conjunto de dados</span>
@@ -12005,7 +12005,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Selecione três índices de sua escolha que você gostaria de obter como amostra do conjunto de dados</span>
@@ -12156,15 +12156,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Fazer uma cópia do DataFrame utilizando a função &#39;drop&#39; para soltar o atributo dado</span>
-<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Milk&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">new_data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Detergents_Paper&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># TODO: Dividir os dados em conjuntos de treinamento e teste utilizando o atributo dado como o alvo</span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Milk&#39;</span><span class="p">]]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s1">&#39;Detergents_Paper&#39;</span><span class="p">]]</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">new_data</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span> <span class="o">=</span> <span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 
 <span class="c1"># TODO: Criar um árvore de decisão regressora e ajustá-la ao conjunto de treinamento</span>
@@ -12191,7 +12191,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0.515849943807
+<pre>0.815241279195
 </pre>
 </div>
 </div>
@@ -12219,7 +12219,7 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Resposta:</strong></p>
-<p>Tentando prever o atributo <strong>Milk</strong>, obtive uma pontuação de ~ <strong>0.516</strong>. É uma pontuação considerável, podendo nos levar a crer que podemos explicar a variância do atributo <strong>Milk</strong> por meio dos demais atributos.</p>
+<p>Tentando prever o atributo <strong>Detergents_Paper</strong>, obtive uma pontuação de ~ <strong>0.815</strong>. É uma pontuação bem próxima de 1, podendo-se concluir que o atributo não traz informação nova para a análise, dado que pode ser previsto por meio dos demais atributos.</p>
 
 </div>
 </div>
@@ -12235,7 +12235,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
@@ -14278,7 +14278,7 @@ IKSJ6m9n+AAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Escalone os dados utilizando o algoritmo natural</span>
@@ -18588,7 +18588,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mostre a amostra dados log-transformada</span>
@@ -18695,7 +18695,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Para cada atributo encontre os pontos de dados com máximos valores altos e baixos</span>
@@ -19536,7 +19536,7 @@ QmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[45]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Aplique a PCA ao ajustar os bons dados com o mesmo número de dimensões como atributos</span>
@@ -19901,14 +19901,15 @@ mZmZmZlZFv8HOO99XSTRZp8AAAAASUVORK5CYII=
 <br /><br /></li>
 <li>As quatro primeiras componentes explicam, juntas, em torno de <strong>92.7%</strong> da variância dos dados.
 <br /><br /></li>
-<li><p>Pelo gráfico, analisando as barras com maiores valores positivos e menores valores negativos, vemos que:</p>
-<ul>
-<li>A primeira componente melhor representa os gastos dos clientes com <em>detergents_paper</em>, <em>grocery</em> e <em>milk</em>.</li>
-<li>A segunda melhor representa os gastos com <em>fresh</em>, <em>frozen</em> e <em>delicatessen</em>.</li>
-<li>A terceira melhor representa gastos com <em>fresh</em>, <em>detergents_paper</em> e <em>delicatessen</em>.</li>
-<li>A quarta melhor representa gastos com <em>fresh</em> e <em>frozen</em>.</li>
+<li>Pelo gráfico, analisando as barras com maiores valores positivos e menores valores negativos, vemos que:<ul>
+<li>A primeira componente melhor representa os gastos crescentes dos clientes com <em>detergents_paper</em>, <em>grocery</em> e <em>milk</em>. Vamos que esses atributos estão correlacionados, e a primeira componente mede portanto o consumo desses tipos de produtos, quanto maior o gasto com esses tipos de produtos, maior o valor da primeira componente.
+<br /><br /></li>
+<li>A segunda melhor representa os gastos com <em>fresh</em>, <em>frozen</em> e <em>delicatessen</em>. Assim como no caso da primeira componente, vemos que a segunda componente representa o consumo crescente desses tipos de produtos. Quanto maior o gasto com esses tipos de produtos, maior o valor da segunda componente.
+<br /><br /></li>
+<li>A terceira melhor representa gastos crescentes com <em>fresh</em> e principalmente gastos decrescentes com <em>delicatessen</em>. Quanto menores os gastos com <em>delicatessen</em> e maiores os gastos com <em>fresh</em>, maior o valor da terceira componente, que mede justamente o maior consumo de produtos frescos em detrimento dos produtos de delicatessen.
+<br /><br /></li>
+<li>A quarta melhor representa gastos crescentes com <em>fresh</em> e principalmente gastos decrescentes com <em>frozen</em>. Assim como no caso da terceira componente, a quarta componente mede a discrepância entre o consumo de produtos frescos em detrimento do consumo de produtos congelados. Obtêm-se valores maiores com maiores gastos com <em>fresh</em> e menores gastos com <em>frozen</em>.</li>
 </ul>
-<p>As duas primeiras componentes já são o bastante para explicar os 6 atributos.</p>
 </li>
 </ul>
 
@@ -19926,7 +19927,7 @@ mZmZmZlZFv8HOO99XSTRZp8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[46]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Exiba a amostra de log-data depois de aplicada a tranformação da PCA</span>
@@ -20030,7 +20031,7 @@ mZmZmZlZFv8HOO99XSTRZp8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Aplique o PCA ao ajusta os bons dados com apenas duas dimensões</span>
@@ -20062,7 +20063,7 @@ mZmZmZlZFv8HOO99XSTRZp8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Exiba a amostra de log-data depois de aplicada a transformação da PCA em duas dimensões</span>
@@ -20145,7 +20146,7 @@ mZmZmZlZFv8HOO99XSTRZp8AAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[61]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Create a biplot</span>
@@ -21265,7 +21266,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.mixture</span> <span class="kn">import</span> <span class="n">GaussianMixture</span>
@@ -21366,7 +21367,7 @@ AABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mostre os resultados do clustering da implementação</span>
@@ -22010,7 +22011,7 @@ IQAAAACV8/8BBXa9ieRmHTEAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Transforme inversamento os centros</span>
@@ -22138,7 +22139,7 @@ IQAAAACV8/8BBXa9ieRmHTEAAAAASUVORK5CYII=
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mostre as previsões</span>
@@ -22266,7 +22267,7 @@ Depois de um determinado período de tempo, deveriam-se analisar o impacto da mu
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Mostre os resultados do clustering baseado nos dados do &#39;Channel&#39;</span>
@@ -22914,7 +22915,7 @@ AAAAWuf/A4rxQnh8Z0jiAAAAAElFTkSuQmCC
 <ul>
 <li>Analisando graficamente, podemos concluir que o algoritmo de clustering forneceu resultados bastante satisfatórios, pois por eles pudemos identificar que existem dois grupos diferentes de clientes (correspondendo aos dois valores do atributo <em>Channel</em>), e ao mesmo tempo vemos que a grande maioria dos pontos foi classificada de forma consistente. 
 <br /><br /></li>
-<li>Nesse gráfico não conseguimos traçar uma fronteira que separe corretamente todos os pontos nos dois segmentos. Entretanto, vemos que quanto mais nos afastamos do valor 0 na dimensão 0, mais os pontos tornam-se homogêneos dentro do segmento. Pontos com valores absolutos relativamente grandes na dimensão 0, poderíam ser classifados puramente nos respectivos segmentos.
+<li>Nesse gráfico não conseguimos traçar uma fronteira que separe corretamente todos os pontos nos dois segmentos. Entretanto, vemos que quanto mais nos afastamos do valor 0 na dimensão 0, mais os pontos tornam-se homogêneos dentro do segmento. Pontos com valores absolutos relativamente grandes na dimensão 0, poderíam ser classificados puramente nos respectivos segmentos.
 <br /><br /></li>
 <li>Sim, os segmentos são correspondentes (centros de distribuição &lt;=&gt; varejistas), (restaurantes, bares e cafés &lt;=&gt; HoReCa), e no gráfico com a visualização dos clusters, podemos dizer que a fronteira traçada entre os dois clusters pelo algoritmo corresponde à fronteira que intuitivamente traçaríamos ao observar o gráfico da seção anterior.</li>
 </ul>
